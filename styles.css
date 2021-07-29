@@ -1,0 +1,139 @@
+html, body {
+    height: 100%;
+}
+.myContainer {
+    min-height: 100%;
+    width: 100%;
+    background-image:linear-gradient(30deg, white,lightskyblue, white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+h1:hover {
+    transition: 2s linear;
+    transform: scale(1.5, 1.5);
+}
+h1 {
+    transition: 2s;
+    font-family: HeaderSpecialFont;
+    padding-top: 5%;
+    font-size: large;
+    font-weight: bolder;
+    color: #009999;  
+}
+@font-face {
+    src: url(assets/fonts/actionj.ttf);
+    font-family: HeaderSpecialFont;
+}
+
+.myContainer > div:nth-child(2) {
+    background-image:linear-gradient(20deg, lightskyblue, white, lightskyblue);   
+    width: 500px;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgray;
+}
+
+.myContainer > div:nth-child(2) textarea {
+    flex-wrap: wrap;
+    display: flex;
+    height: auto;
+    margin: 20px auto;
+    resize: none;
+}
+
+#textOfTitleBox { 
+    padding-top:10px ;
+}
+#dateBox , #timeBox , #titleBox , #detailsBox{
+    background-color: transparent;
+    border-color: lightgray;
+}
+#titleBox{
+    margin: 10px auto;
+}
+#titleBox , #detailsBox{
+    transition: 1s linear;
+}
+#detailsBox:hover{
+    transition: 1s linear;
+    transform: scale(1.5, 1.5);
+}
+
+#titleBox:hover{
+    transition: 0.5s linear;
+    transform: scale(1.3, 1.3);
+}
+.timeInputs { 
+    display: inline-block;
+}
+
+.notesView {
+    display:inline-block;
+    margin: 20px ;
+    border: 1px solid black;
+    background-color:  #66b3ff;
+    width: 250px;
+    height: 230px;
+    vertical-align: middle;
+    position: relative;
+    transition: 1s;
+}
+.detailsFromUser {
+    display: block;
+    padding: 10px;
+    word-wrap: break-word;
+    min-height: 7em;
+    max-height: 7em;
+    white-space: pre-wrap;
+}
+.timeFromUser { 
+    color:#c6d9ec; 
+    position: absolute;  
+    font-weight: bold;
+    left: 2px;
+    bottom: 2px;
+}
+.titleFromUser { 
+    color: #003d99;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+i {
+    visibility: hidden;
+    position: relative;
+    left: 110px;  
+}
+
+.notesView:hover {
+    transform: scale(1.1, 1.1);
+    transition: 1s linear;
+    background-color:#3385ff;  
+}
+
+.notesView:hover > i {
+    visibility: visible;
+}
+
+.notesView:nth-last-child(1) { 
+    animation: lastNoteAnimation 1s;   
+}
+@keyframes lastNoteAnimation { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.buttonStyles {
+    margin: 15px auto;
+}
